@@ -2,8 +2,7 @@ FROM python:3.8-slim-buster
 
 # Installs python, removes cache file to make things smaller
 RUN apt update -y && \
-    yum install -y python3 python3-dev python3-pip gcc postgresql python-devel postgresql-devel && \
-    rm -Rf /var/cache/yum
+    apt install -y python3 python3-dev python3-pip gcc postgresql
 
 # Be sure to copy over the function itself!
 # Goes last to take advantage of Docker caching.

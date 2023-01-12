@@ -115,7 +115,6 @@ class CommentsView(ListCreateAPIView):
         Get total comments value of post id from redis
         """
         total_comments = r.zscore('comments', str(post.id))
-        print(total_comments)
 
         """
         If value of total comments in redis is None, count it from db
