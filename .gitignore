@@ -1,3 +1,5 @@
 config.py
 db.sqlite3
 .ide
+*.pyc
+__pycache__
